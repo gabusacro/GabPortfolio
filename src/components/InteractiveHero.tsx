@@ -44,13 +44,33 @@ export default function InteractiveHero() {
         {/* Animated background grid */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.8)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.8)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20"></div>
         
+        {/* Profile Photo as Background Element */}
+        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+          <div className="relative">
+            {/* Large photo background */}
+            <div className="w-[600px] h-[600px] rounded-full overflow-hidden opacity-50">
+              <img
+                src="/profile.png"
+                alt="Gabriel Sacro"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            {/* Subtle geometric overlays */}
+            <div className="absolute top-0 left-0 w-full h-full">
+              <div className="absolute top-16 left-16 w-24 h-24 border border-orange-400/20 rotate-45"></div>
+              <div className="absolute bottom-16 right-16 w-20 h-20 border border-red-400/20 -rotate-45"></div>
+            </div>
+          </div>
+        </div>
+        
         {/* Floating geometric shapes */}
         <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rotate-45 animate-pulse"></div>
         <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full animate-bounce"></div>
         <div className="absolute bottom-32 left-1/3 w-20 h-20 border border-emerald-400/30 transform rotate-12 animate-spin"></div>
         
         {/* Main content */}
-        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <div className={`transition-all duration-1500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
             {/* Status badge */}
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm">
