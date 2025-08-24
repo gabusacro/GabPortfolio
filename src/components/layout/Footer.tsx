@@ -21,18 +21,19 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="group inline-flex items-center gap-3 mb-6">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Sparkles className="h-7 w-7 text-white" />
+                <div className="w-12 h-12 rounded-xl overflow-hidden border-2 border-cyan-400/30 group-hover:scale-110 transition-transform duration-300">
+                  <img
+                    src="/profile.png"
+                    alt="Gabriel Sacro"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 rounded-xl border-2 border-cyan-400/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="flex flex-col">
-                <span className="text-3xl font-black bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  GAB
-                </span>
-                <span className="text-sm font-medium text-gray-400 -mt-1">
-                  PORTFOLIO
-                </span>
+                                 <span className="text-2xl font-black bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                   GABRIELSACRO
+                 </span>
               </div>
             </Link>
             <p className="text-gray-300 max-w-md leading-relaxed mb-6">
@@ -48,9 +49,9 @@ export default function Footer() {
               <a href="https://linkedin.com" className="group p-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-lg hover:bg-gradient-to-r hover:from-purple-500/40 hover:to-pink-500/40 transition-all duration-300 backdrop-blur-sm">
                 <Linkedin className="h-5 w-5 text-purple-300 group-hover:text-white transition-colors duration-300" />
               </a>
-              <a href="mailto:contact@example.com" className="group p-3 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 rounded-lg hover:bg-gradient-to-r hover:from-emerald-500/40 hover:to-teal-500/40 transition-all duration-300 backdrop-blur-sm">
-                <Mail className="h-5 w-5 text-emerald-300 group-hover:text-white transition-colors duration-300" />
-              </a>
+                             <a href="mailto:gabu.sacro@gmail.com" className="group p-3 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 rounded-lg hover:bg-gradient-to-r hover:from-emerald-500/40 hover:to-teal-500/40 transition-all duration-300 backdrop-blur-sm">
+                 <Mail className="h-5 w-5 text-emerald-300 group-hover:text-white transition-colors duration-300" />
+               </a>
             </div>
           </div>
 

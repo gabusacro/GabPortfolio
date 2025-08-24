@@ -14,7 +14,7 @@ const navigation = [
 const socialLinks = [
   { name: 'GitHub', href: 'https://github.com', icon: Github, color: 'from-cyan-500 to-purple-500' },
   { name: 'LinkedIn', href: 'https://linkedin.com', icon: Linkedin, color: 'from-purple-500 to-pink-500' },
-  { name: 'Email', href: 'mailto:contact@example.com', icon: Mail, color: 'from-emerald-500 to-teal-500' },
+  { name: 'Email', href: 'mailto:gabu.sacro@gmail.com', icon: Mail, color: 'from-emerald-500 to-teal-500' },
 ];
 
 export default function Header() {
@@ -40,18 +40,19 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="group flex items-center gap-2">
             <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Sparkles className="h-6 w-6 text-white" />
+              <div className="w-10 h-10 rounded-xl overflow-hidden border-2 border-cyan-400/30 group-hover:scale-110 transition-transform duration-300">
+                <img
+                  src="/profile.png"
+                  alt="Gabriel Sacro"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 rounded-xl border-2 border-cyan-400/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-black bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">
-                Gabriel Sacro
-              </span>
-              <span className="text-xs font-medium text-gray-400 -mt-1">
-                PORTFOLIO
-              </span>
+                                            <span className="text-3xl font-black bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">
+                 GABRIELSACRO
+               </span>
             </div>
           </Link>
         </div>
@@ -116,8 +117,12 @@ export default function Header() {
           <div className="fixed inset-y-0 right-0 z-[60] w-full overflow-y-auto bg-black/90 backdrop-blur-xl border-l border-cyan-400/20 px-6 py-6 sm:max-w-sm">
             <div className="flex items-center justify-between mb-8">
               <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-                <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
-                  <Sparkles className="h-5 w-5 text-white" />
+                <div className="w-8 h-8 rounded-lg overflow-hidden border-2 border-cyan-400/30">
+                  <img
+                    src="/profile.png"
+                    alt="Gabriel Sacro"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                                  <span className="text-lg font-black bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">
                    Gabriel Sacro

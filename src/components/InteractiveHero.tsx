@@ -44,11 +44,11 @@ export default function InteractiveHero() {
         {/* Animated background grid */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.8)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.8)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20"></div>
         
-        {/* Profile Photo as Background Element */}
-        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+        {/* Profile Photo as Background Element - Hidden on desktop, visible on mobile */}
+        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 pointer-events-none md:hidden">
           <div className="relative">
             {/* Large photo background */}
-            <div className="w-[600px] h-[600px] rounded-full overflow-hidden opacity-50">
+            <div className="w-[500px] h-[500px] rounded-full overflow-hidden opacity-50">
               <img
                 src="/profile.png"
                 alt="Gabriel Sacro"
