@@ -1,103 +1,68 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import InteractiveHero from '@/components/InteractiveHero';
+import SkillsSection from '@/components/SkillsSection';
+import ProjectsSection from '@/components/ProjectsSection';
+import ContactSection from '@/components/ContactSection';
+
+const skills = [
+  { name: 'Frontend Development', icon: 'Globe', description: 'React, Next.js, TypeScript, Tailwind CSS', level: 85, color: 'from-blue-500 to-cyan-500' },
+  { name: 'Backend Development', icon: 'Database', description: 'Node.js, Express, PostgreSQL, Supabase', level: 75, color: 'from-emerald-500 to-teal-500' },
+  { name: 'Mobile Development', icon: 'Smartphone', description: 'React Native, Progressive Web Apps', level: 70, color: 'from-purple-500 to-pink-500' },
+  { name: 'Web Platforms & Hosting', icon: 'Globe', description: 'WordPress, Shopify, Hostinger, SiteGround', level: 80, color: 'from-indigo-500 to-purple-500' },
+  { name: 'DevOps & Tools', icon: 'Zap', description: 'Docker, CI/CD, AWS, Vercel', level: 65, color: 'from-orange-500 to-red-500' },
+];
+
+const featuredProjects = [
+  {
+    id: 1,
+    title: 'E-Commerce Platform',
+    description: 'Full-stack e-commerce solution with payment integration and admin dashboard.',
+    tech: ['Next.js', 'TypeScript', 'Stripe', 'PostgreSQL'],
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop&crop=center',
+    featured: true,
+    github: '#',
+    live: '#',
+    category: 'Full-Stack',
+  },
+  {
+    id: 2,
+    title: 'Task Management App',
+    description: 'Collaborative task management application with real-time updates.',
+    tech: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop&crop=center',
+    featured: true,
+    github: '#',
+    live: '#',
+    category: 'Web App',
+  },
+  {
+    id: 3,
+    title: 'Portfolio Website',
+    description: 'Modern portfolio website built with Next.js and Tailwind CSS.',
+    tech: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Framer Motion'],
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300&fit=crop&crop=center',
+    featured: true,
+    github: '#',
+    live: '#',
+    category: 'Frontend',
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div className="min-h-screen bg-black text-white overflow-hidden pt-20">
+      {/* Interactive Hero Section with Client-Side Effects */}
+      <InteractiveHero />
+      
+      {/* Skills Section */}
+      <SkillsSection skills={skills} />
+      
+      {/* Projects Section */}
+      <ProjectsSection projects={featuredProjects} />
+      
+      {/* Contact Section */}
+      <ContactSection />
     </div>
   );
 }
